@@ -1,0 +1,20 @@
+#navTable,#searchButton{
+    margin-top: 10px;
+}
+#searchContainer{
+    margin-top: 0.5em;
+    width: 75em;
+}
+#searchButton{
+    background: #9B00DB;
+    color: #ffffff;
+}
+
+#headPic{
+    margin: 1px;
+
+}
+.v{
+    background-color: #FE6210;
+    color: #ffffff;
+}
