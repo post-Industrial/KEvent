@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSUQWhcH2amTRAX0bd-_-1RTh9u5lXf0M&callback=initMap" async defer></script>
+    <script src="./js/file.js"></script>                    
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                     </div>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id="logContainer">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
@@ -42,19 +43,15 @@
             <img src="resources/headPic.jpg" class="img-rounded" alt="Cinque Terre"  id="headPic" >
         </div>-->
 
-        <div class="container-fluid">
-
+        <div class="container-fluid" id="mainContainer">
             <div class="row">
-
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
-                    <div class="container-fluid t">
-
+                <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6" id="mapContainer">
+                    <div class="container-fluid" id="mapPicContainer">
+                        <div id="map"></div>
                     </div>
-
                 </div>
-
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                <div class="col-xs-4 col-sm-5 col-md-6 col-lg-6 ">
 
                     <div class="container">
 
@@ -64,28 +61,33 @@
 
                         <div class="row">
 
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="eventList">
+
+
 
                                 <ul class="nav nav-pills">
-                                    <li class="active"><a data-toggle="pill" href="#home">Populare</a></li>
-                                    <li><a data-toggle="pill" class="v" href="#menu1">Recomended</a></li>
-                                    <li><a data-toggle="pill" href="#menu2">Filtered</a></li>
+                                    <li class="active"><a data-toggle="pill" href="#menuPop">Populare</a></li>
+                                    <li><a data-toggle="pill" class="v" href="#menuRec">Recomended</a></li>
+                                    <li><a data-toggle="pill" href="#menuFil">Filtered</a></li>
                                 </ul>
 
                                 <div class="tab-content">
-                                    <div id="home" class="tab-pane fade in active">
-                                        <h3>PoP</h3>
-                                        <p>///.///</p>
+                                    <div id="menuPop" class="tab-pane fade in active">
+
                                     </div>
-                                    <div id="menu1" class="tab-pane fade">
+                                    <div id="menuRec" class="tab-pane fade">
                                         <h3>Recomended</h3>
                                         <p>/////////</p>
                                     </div>
-                                    <div id="menu2" class="tab-pane fade">
+                                    <div id="menuFil" class="tab-pane fade">
                                         <h3>Filtered</h3>
                                         <p>///////////</p>
                                     </div>
                                 </div>
+
+
+
+
                             </div>
 
 
@@ -107,7 +109,6 @@
         </div>
 
     </main>
-
 </body>
 
 </html>

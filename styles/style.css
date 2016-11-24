@@ -1,9 +1,19 @@
 #navTable,#searchButton{
     margin-top: 10px;
 }
+.navbar-inverse{
+     border-color: #9B00DB;
+}
 #searchContainer{
     margin-top: 0.5em;
-    width: 75em;
+}
+#inputSearchEvent{
+    width: 100%;
+    display: inline-block;
+
+}
+#logContainer{
+    margin-left: -20px;
 }
 #searchButton{
     background: #9B00DB;
@@ -17,4 +27,29 @@
 .v{
     background-color: #FE6210;
     color: #ffffff;
+}
+#eventList{
+      border: #000000;
+      /*background-color: #ffffff;*/
+    
+}
+.html,.body{ 
+    height: 100%; margin: 0; padding: 0;
+
+ }
+#mapContainer{
+     height: 100em;
+ }
+#mapPicContainer{
+    background: url(../resources/headerPic.jpg) ;
+    height: 100%;
+    width: 100%;
+}
+#map{ 
+    height: 40%; 
+    width: 100%;
+}
+#mainContainer{
+      background-color: #f5f5f5;
+    
 }
