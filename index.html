@@ -8,27 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSUQWhcH2amTRAX0bd-_-1RTh9u5lXf0M&callback=initMap" async defer></script>
-    <script src="./js/file.js"></script>                    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSUQWhcH2amTRAX0bd-_-1RTh9u5lXf0M&callback=initMap" async
+        defer></script>
+    <script src="./js/file.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Main</a></li>
                 <li><a href="#">Profile</a></li>
                 <li>
-                    <div class="container" id="searchContainer">
-                        <input type="search" name="" id="inputSearchEvent" class="form-control" value="" required="required" title="" placeholder="Search Events, People, Organization">
+                    <div class="container" id="inputSearchEvent">
+                        <input type="search" name="" class="form-control" value="" required="required" title="" placeholder="Search Events, People, Organization">
                     </div>
                 </li>
                 <li>
                     <div class="container-fluid">
-                        <a class="btn btn-sm" id="searchButton">Learn more</a>
+                        <a class="btn btn-sm text-center" id="searchButton">Search</a>
                     </div>
                 </li>
             </ul>
@@ -44,61 +48,75 @@
         </div>-->
 
         <div class="container-fluid" id="mainContainer">
-            <div class="row">
-                <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6" id="mapContainer">
-                    <div class="container-fluid" id="mapPicContainer">
-                        <div id="map"></div>
-                    </div>
+            <div class="row" id="mainRow">
+                <div class="col-xs-8 col-sm-5 col-md-6 col-lg-6 mainMargin" id="map">
                 </div>
-                
-                <div class="col-xs-4 col-sm-5 col-md-6 col-lg-6 ">
 
-                    <div class="container">
+                <div class="col-xs-4 col-sm-5 col-md-6 col-lg-6 mainMargin secondCol">
 
 
-
-
-
-                        <div class="row">
-
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="eventList">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="eventList">
 
 
 
-                                <ul class="nav nav-pills">
-                                    <li class="active"><a data-toggle="pill" href="#menuPop">Populare</a></li>
-                                    <li><a data-toggle="pill" class="v" href="#menuRec">Recomended</a></li>
-                                    <li><a data-toggle="pill" href="#menuFil">Filtered</a></li>
-                                </ul>
+                        <ul class="nav nav-pills">
+                            <li class="active"><a data-toggle="pill" href="#menuPop">Populare</a></li>
+                            <li><a data-toggle="pill" class="v" href="#menuRec">Recomended</a></li>
+                            <li><a data-toggle="pill" href="#menuFil">Filtered</a></li>
+                        </ul>
 
-                                <div class="tab-content">
-                                    <div id="menuPop" class="tab-pane fade in active">
-
-                                    </div>
-                                    <div id="menuRec" class="tab-pane fade">
-                                        <h3>Recomended</h3>
-                                        <p>/////////</p>
-                                    </div>
-                                    <div id="menuFil" class="tab-pane fade">
-                                        <h3>Filtered</h3>
-                                        <p>///////////</p>
-                                    </div>
-                                </div>
-
-
-
+                        <div class="tab-content">
+                            <div id="menuPop" class="tab-pane fade in active">
 
                             </div>
-
-
-
+                            <div id="menuRec" class="tab-pane fade">
+                                <h3>Recomended</h3>
+                                <p>/////////</p>
+                            </div>
+                            <div id="menuFil" class="tab-pane fade">
+                                <h3>Filtered</h3>
+                                <p>///////////</p>
+                            </div>
                         </div>
 
 
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
-                        </div>
+
                     </div>
+
+
+
+
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 1</label>
+                            <label><input type="checkbox" value="">Option 1</label>
+                            <label><input type="checkbox" value="">Option 1</label>
+                        </div>
+                        <a class="btn btn-sm text-center" id="searchButton">Search</a>
+
+
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker6'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker7'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
 
                 </div>
 
