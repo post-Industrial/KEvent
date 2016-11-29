@@ -6,6 +6,38 @@
     width: 7em;
     padding-top: 0.6em;
 }
+#searchButton2{
+    background: #FE6210;
+    height: 100%;
+    border-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    margin-bottom: 1em;
+}
+#clearButton{
+    background: #ffffff;
+    height: 100%;
+    color: #000000;
+    border-color: #000000;
+    width: 100%;
+    margin-bottom: 1em;
+    
+
+}
+#checkboxRow{
+    margin-left: 0.1em;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+    background-color: #9B00DB;
+    border-color: #ffffff;
+}
+.checkboxCost.active, .checkboxCost.active:focus, .checkboxCost.active:hover{
+    background-color: #FE6210;
+    border-color: #000000;
+
+
+}
 .navbar-inverse{
      border-color: #9B00DB;
      margin-bottom: 0;
@@ -59,7 +91,7 @@
     height: 30em;
 }
 body{
-    background: url(../resources/headPic.jpg) ;
+    background: url(../resources/headPic1.jpg) ;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -75,3 +107,6 @@ body{
     margin-right: 4em;
 }
 
+.holded{
+    opacity: 1;
+}
