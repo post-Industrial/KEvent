@@ -81,7 +81,7 @@
     background-color: #eee;
 }
 .secondCol{
-    background-color: #eee;
+  
 }
 .mainMargin{
     margin-top: 2em;
@@ -101,7 +101,7 @@ body{
     background-attachment: fixed;
 }
 #mainContainer{
-    background: #ffffff;
+    
     
     margin-left: 4em;
     margin-right: 4em;
@@ -109,4 +109,7 @@ body{
 
 .holded{
     opacity: 1;
+}
+#mainRow{
+    
 }
